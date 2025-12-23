@@ -1,0 +1,25 @@
+seed: 42
+
+output:
+  path: data/raw
+  format: jsonl
+
+events:
+  total: 10000
+
+distribution:
+  normal: 0.7
+  duplicate: 0.1
+  late: 0.1
+  bad: 0.1
+
+sources:
+  skewed_source: payment-service
+  skew_ratio: 0.8
+  other_sources:
+    - order-service
+    - inventory-service
+    - pipeline-job
+
+time:
+  max_late_minutes: 1440

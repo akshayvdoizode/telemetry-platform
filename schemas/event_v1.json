@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Telemetry Event v1",
+  "type": "object",
+  "required": [
+    "event_id",
+    "source",
+    "event_type",
+    "event_timestamp",
+    "ingest_timestamp",
+    "payload",
+    "metadata"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "description": "Globally unique identifier for idempotency"
+    },
+    "source": {
+      "type": "string",
+      "description": "Logical producer of the telemetry event"
+    },
+    "event_type": {
+      "type": "string",
+      "description": "Type of event (log, error, metric, etc.)"
+    },
+    "event_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time when the event actually occurred"
+    },
+    "ingest_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time when the event was ingested into the platform"
+    },
+    "payload": {
+      "type": "object",
+      "description": "Raw, semi-structured event data",
+      "additionalProperties": true
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["host", "env", "service"],
+      "properties": {
+        "host": {
+          "type": "string",
+          "description": "Host or node emitting the event"
+        },
+        "env": {
+          "type": "string",
+          "description": "Deployment environment (prod, staging, dev)"
+        },
+        "service": {
+          "type": "string",
+          "description": "Owning service or pipeline"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

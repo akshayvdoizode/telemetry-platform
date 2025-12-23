@@ -1,0 +1,17 @@
+{
+  "event_id": "550e8400-e29b-41d4-a716-446655440000",
+  "source": "payment-service",
+  "event_type": "error",
+  "event_timestamp": "2025-01-12T10:15:30Z",
+  "ingest_timestamp": "2025-01-12T10:15:35Z",
+  "payload": {
+    "error_code": "PAY_502",
+    "message": "Upstream timeout",
+    "latency_ms": 3400
+  },
+  "metadata": {
+    "host": "ip-10-0-1-12",
+    "env": "prod",
+    "service": "payments"
+  }
+}
