@@ -1,0 +1,8 @@
+storage:
+  bronze_path: data/bronze
+  silver_path: data/silver
+  gold_path: data/gold
+
+ingestion:
+  max_bad_records: 1000
+  reprocess: false
