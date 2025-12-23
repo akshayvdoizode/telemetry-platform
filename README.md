@@ -9,7 +9,6 @@ Engineering teams collect massive telemetry data, but when failures occur they r
 - SRE / Reliability Teams
 
 ## Core Use Cases
-🔒 Core Use Cases (FINAL)
 
 1. Historical Failure Investigation
 Enable engineers to quickly investigate past incidents by querying and correlating telemetry events across services, without relying on tribal knowledge or ad-hoc manual queries.
